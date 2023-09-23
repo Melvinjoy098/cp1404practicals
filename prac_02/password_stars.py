@@ -8,12 +8,12 @@ def main():
         break
 
 
-    print_asterisks(password)
+    print_asterisks(len(password))
 
 
-def print_asterisks(password):
+def print_asterisks(count):
     """prints the astricks to the length of the password."""
-    print('*' * len(password))
+    print('*' * count)
 
 
 def get_password():
