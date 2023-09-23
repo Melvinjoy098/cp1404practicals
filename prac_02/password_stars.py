@@ -1,9 +1,25 @@
+def main():
 
-while True:
+    while True:
+        password = get_password()
+        if len(password) < 8:
+            print(f"Error: The password must be at least 8 characters long.")
+            continue
+        break
+
+
+    print_asterisks(password)
+
+
+def print_asterisks(password):
+    """prints the astricks to the length of the password."""
+    print('*' * len(password))
+
+
+def get_password():
+    """gets the password from the user"""
     password = input("Please enter your password: ")
-    if len(password) < 8:
-        print(f"Error: The password must be at least 8 characters long.")
-        continue
-    break
+    return password
 
-print('*' * len(password))
+
+main()
