@@ -11,9 +11,7 @@ Ans: This error occurs when denominator value given as zero
 
 try:
     numerator = int(input("Enter the numerator: "))
-    denominator = 0
-    while denominator == 0:
-        denominator = int(input("Enter the denominator(not zero): "))
+    denominator = int(input("Enter the denominator(not zero): "))
     fraction = numerator / denominator
     print(fraction)
 except ValueError:
