@@ -1,4 +1,13 @@
-from project import Project, load_projects_from_file
+from project import Project
+
+def load_projects_from_file(filename="projects.txt"):
+    projects = []
+    with open(filename, "r") as f:
+        headers = f.readline()  # Skip the header line
+        for line in f:
+            name, start_date, priority, estimate, completion = line.strip().split('\t')
+            projects.append(Project(name, start_date, priority, estimate, completion))
+    return projects
 
 def display_menu():
     print("- (L)oad projects")
